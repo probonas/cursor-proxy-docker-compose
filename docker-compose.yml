@@ -1,0 +1,9 @@
+services:
+  cursor-proxy:
+    build: .
+    ports:
+      - "8765:8765"
+    environment:
+      CURSOR_API_KEY: ${CURSOR_API_KEY}
+      CURSOR_BRIDGE_HOST: "0.0.0.0"
+    restart: always
